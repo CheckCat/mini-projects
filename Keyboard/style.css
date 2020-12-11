@@ -1,0 +1,71 @@
+.container  {
+    width: 100%;
+}
+
+.keyboard ul {
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    list-style: none;
+    flex-direction: column;
+    font-family: "Roboto", sans-serif;
+}
+
+.keyboard li>ul {
+    flex-direction: row;
+}
+
+.key {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    align-items: center;
+    justify-items: center;
+    height: 50px;
+    border: 5px solid rgba(0, 0, 0, 0.199);
+    background-color: rgb(43, 42, 42);
+    font-size: 13px;
+    color: white;
+}
+
+.keyboard li>ul>li:not(:last-child) {
+    border-right: none;
+}
+
+.keyboard li:not(:last-child)>ul>li {
+    border-bottom: none;
+}
+
+.key-standartsize {
+    width: 50px;
+    flex-direction: column;
+}
+
+.key-tl {
+    grid-area: tl;
+}
+
+.key-tr {
+    grid-area: tr;
+}
+
+.key-bl {
+    grid-area: bl;
+}
+
+.key-br {
+    grid-area: br;
+}
+
+.key-mediumsize {
+    width: 80px;
+}
+
+.key-othersize {
+    flex-grow: 1;
+}
+
+.key-active {
+    background-color: rgba(0, 0, 0, 0.9);
+    color: rgba(255, 255, 255, 0.5);
+}
